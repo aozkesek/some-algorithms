@@ -2,10 +2,13 @@ package ao;
 
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
+import ao.ds.Queue;
+import ao.ds.Stack;
 import ao.sort.MergeSort;
 import ao.sort.QuickSort;
 import ao.sort.Sorting;
@@ -15,13 +18,23 @@ public class Main {
     public static void main(String[] args) {
         int[] n = new int[] { 
             15, 48, 1024 , 1024*8
-            , 1024*64, 1024*256 , 1024*1024*32 
-        };
+            , 1024*64, 1024*256 //, 1024*1024*32 
+        };  
 
         for (int i : n) {
             double[] numbers = genNRandom(i);
+            int k = numbers.length;
             
-            if (numbers.length < 10000) {
+            System.out.println(new Stack<Double>()
+                                        .pushAll(copyAsDouble(numbers))
+                                        .popAll(new ArrayList<Double>()));
+
+            System.out.println(new Queue<Double>()
+                                        .pushAll(copyAsDouble(numbers))
+                                        .popAll(new ArrayList<Double>()));
+
+
+            if (k < 10000) {
                 sortNCheck(copyAsDouble(numbers), Sorting::bubble, "buble");
                 sortNCheck(copyAsDouble(numbers), Sorting::insertion, "insertion");
                 sortNCheck(copyAsDouble(numbers), Sorting::selection, "selection");
@@ -29,10 +42,10 @@ public class Main {
 
             sortNCheck(copyAsDouble(numbers), MergeSort::sort, "merge");
             sortNCheck(copyAsDouble(numbers), QuickSort::sort, "quick");
-            sortNCheck(copyAsDouble(numbers), Arrays::sort, "java");
-                
+            sortNCheck(copyAsDouble(numbers), Arrays::sort, "java"); 
         }
 
+        
     }
 
     static <T extends Comparable<T>> 
