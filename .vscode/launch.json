@@ -1,0 +1,49 @@
+{
+        // Use IntelliSense to learn about possible attributes.
+        // Hover to view descriptions of existing attributes.
+        // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "java",
+                "name": "CodeLens (Launch) - AVLTree",
+                "request": "launch",
+                "mainClass": "ao.ds.AVLTree",
+                "projectName": "analysis-of-algorithm_b37ce66"
+            },
+            {
+                "type": "java",
+                "name": "CodeLens (Launch) - Main",
+                "request": "launch",
+                "mainClass": "ao.Main",
+                "projectName": "analysis-of-algorithm_f87afb7c"
+            },
+            {
+                "type": "java",
+                "name": "CodeLens (Launch) - Main",
+                "request": "launch",
+                "mainClass": "aa.Main",
+                "projectName": "analysis-of-algorithm_f87afb7c"
+            },
+            {
+                "type": "java",
+                "name": "CodeLens (Launch) - Main",
+                "request": "launch",
+                "mainClass": "aa.Main",
+                "projectName": "java-aa_8b19f5d"
+            },
+            {
+                "type": "java",
+                "name": "Debug (Launch) - Current File",
+                "request": "launch",
+                "mainClass": "${file}"
+            },
+            {
+                "type": "java",
+                "name": "Debug (Launch)-Main<java-aa_a672ccb0>",
+                "request": "launch",
+                "mainClass": "aa.Main",
+                "projectName": "java-aa_a672ccb0"
+            }
+        ]
+}

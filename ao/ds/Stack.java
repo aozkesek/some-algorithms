@@ -3,6 +3,7 @@ package ao.ds;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.function.Consumer;
 
 /**
  * First In, Last Out 
@@ -65,5 +66,11 @@ public class Stack<T> {
         }
 
         return col.size();
+    }
+
+    public void forEach(Consumer<T> consumer) {
+        while (head >= 0) {
+            consumer.accept(pop());
+        }
     }
 }

@@ -3,7 +3,12 @@ package ao.ds;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.function.Consumer;
 
+/**
+ * First In, Firts Out
+ * 
+ */
 public class Queue<T extends Comparable<T>> {
 
     private Object[] items = new Object[16];
@@ -97,5 +102,11 @@ public class Queue<T extends Comparable<T>> {
         }
 
         return col.size();
+    }
+
+    public void forEach(Consumer<T> consumer) {
+        while (head >= 0) {
+            consumer.accept(pop());
+        }
     }
 }

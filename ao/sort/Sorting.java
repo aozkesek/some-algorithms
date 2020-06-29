@@ -1,6 +1,6 @@
 package ao.sort;
 
-public class Sorting {
+public final class Sorting {
 
     /**
      * Bubble Sort

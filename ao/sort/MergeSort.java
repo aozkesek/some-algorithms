@@ -15,7 +15,7 @@ public class MergeSort<T extends Comparable<T>> extends RecursiveAction {
     private int lo, hi;
     private T[] items;
 
-    // we do not want someone create this
+    // we do not want someone use to create this class
     private MergeSort(T[] arr, int l, int h) {
         if (lo > hi) {
             throw new InvalidAlgorithmImplementationException("MergeSort");
